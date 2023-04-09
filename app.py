@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 
 st.write("""
 # Find the largest
@@ -10,13 +9,15 @@ This app find the largest number among three numbers
 
 st.header('Input Parameters')
 
-number1 = st.number_input("Number_1")
-number2 = st.number_input("Number_2")
-number3 = st.number_input("Number_3")
+number1 = st.number_input("Number 1")
+number2 = st.number_input("Number 2")
+number3 = st.number_input("Number 3")
 
-st.subheader('Prediction')
-if number1 == 10:
-    st.write('Approved')
-else:
-    st.write('Declined')
+st.subheader('Result')
+if number1 > number2 and number1 > number3:
+      st.write('Number 1 is the largest')
+else if  number2 > number1 and number2 > number3:
+     st.write('Number 2 is the largest')
+else if  number3 > number1 and number3 > number2:
+     st.write('Number 3 is the largest')
 
